@@ -4,7 +4,7 @@ const client = new Discord.Client();
 // set what commands are fine
 client.on('message', message => {
 	
-	var messageID = message.channel;
+	var messageID = message.guild.channels.find("name", "roolit");
     /*if (message.content !== '!battlemaster' && 
 		message.content !== '!battlemaster' && 
 		message.content !== '!battlemaster' &&
