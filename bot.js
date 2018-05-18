@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const https = require('https');
 
 var vihannekset = [
 	'bataattia', 'kaurajuurta', 'lanttua', 'maa-artisokkaa', 'mustajuurta', 'naurista', 'palsternakkaa', 'persiljaa', 
@@ -21,6 +22,7 @@ client.on('message', message => {
 	
 	// 446346643445383188 = #meemi-komero ja 446338195462815774 = #yleinen-keskustelu
 	if (message.channel.id === '446346643445383188' || message.channel.id === '446338195462815774'){
+		//PÄIVÄN VIHANNES
 		if (message.content.toLowerCase() === '!päivänvihannes'){
 			var vihannesIndex = Math.floor((Math.random() * vihannekset.length));
 			if (vihannekset[vihannesIndex] === 'pizzaa'){
@@ -30,6 +32,27 @@ client.on('message', message => {
 				message.channel.send( message.author.username + ' syö ' + vihannekset[vihannesIndex]);
 			}
 		}
+		
+		//HTTP REQUEST
+		/*var url = 'https://api.icndb.com/jokes/random?firstName=' + message.author.username + '&amp;lastName=jassoo';
+		
+		https.get(url, (resp) => {
+		  let data = '';
+		 
+		  // A chunk of data has been recieved.
+		  resp.on('data', (chunk) => {
+			data += chunk;
+		  });
+		 
+		  // The whole response has been received. Print out the result.
+		  resp.on('end', () => {
+			var obj = JSON.parse(data);
+			message.reply(obj.value.joke);
+		  });
+		 
+		}).on("error", (err) => {
+		  console.log("Error: " + err.message);
+		});*/
 	}
 	
 });
