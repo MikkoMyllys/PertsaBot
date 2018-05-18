@@ -19,9 +19,9 @@ client.on('message', message => {
     	message.reply(messageID);
   	}*/
 	
-	const roolitChannel = bot.channels.get("id", "446346643445383188");
-	if (message.content === 'mitas' && message.guild.channels.find("name", "meemi-komero").name === roolitChannel.name){
-		message.reply('Känni pois');
+	// 446717892050944001 = #roolit, pidetään puhtaana
+	if (message.channel.id === '446717892050944001'){
+		message.delete().catch(O_o=>{}); 
 	}
 });
 
