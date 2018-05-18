@@ -4,8 +4,8 @@ const client = new Discord.Client();
 // set what commands are fine
 client.on('message', message => {
 	
-	var messageID = message.channel_id;
-    if (message.content !== '!battlemaster' && 
+	var messageID = message.channel;
+    /*if (message.content !== '!battlemaster' && 
 		message.content !== '!battlemaster' && 
 		message.content !== '!battlemaster' &&
 		message.content !== '!battlemaster' &&
@@ -17,7 +17,7 @@ client.on('message', message => {
 		message.content !== '!battlemaster' && 
 		message.content !== '!battlemaster') {
     	message.reply(messageID);
-  	}
+  	}*/
 	message.reply(messageID);
 });
 
