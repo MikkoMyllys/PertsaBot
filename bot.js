@@ -11,12 +11,8 @@ client.on('message', async message => {
 	if(message.author.bot) return;
 	
 	
-	// Also good practice to ignore any message that does not start with our prefix, 
-	// which is set in the configuration file.
-	if(message.content.indexOf("!") !== 0) return;
-	
-	if(message.content == "!JanneLeipoo"){
-		message.channel.send("Mitä se janne leipoo?");
+	if (message.content.startsWith('!MattiLeipoo')) {
+		message.reply('...Merviä!');
 	}
 });
 
