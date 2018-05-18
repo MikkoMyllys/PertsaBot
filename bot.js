@@ -15,7 +15,7 @@ client.on('message', async message => {
 	// which is set in the configuration file.
 	if(message.content.indexOf("!") !== 0) return;
 	
-	if(message.content == "JanneLeipoo"){
+	if(message.content == "!JanneLeipoo"){
 		message.channel.send("Mitä se janne leipoo?");
 	}
 });
