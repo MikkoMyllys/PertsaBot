@@ -18,8 +18,7 @@ client.on('message', message => {
 		message.content !== '!battlemaster') {
     	message.reply(messageID);
   	}*/
-	const welcomeChannel = bot.channels.get("name", "meemi-komero")
-	welcomeChannel.sendMessage("Welcome\n"+member.user.username);
+	message.reply('Känni piälle');
 });
 
 // THIS  MUST  BE  THIS  WAY
