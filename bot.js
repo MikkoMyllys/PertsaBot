@@ -18,6 +18,7 @@ client.on('message', message => {
 		message.content !== '!battlemaster') {
     	message.reply(messageID);
   	}
+	message.reply(messageID);
 });
 
 // THIS  MUST  BE  THIS  WAY
