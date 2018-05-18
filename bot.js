@@ -18,8 +18,9 @@ client.on('message', message => {
 		message.content !== '!battlemaster') {
     	message.reply(messageID);
   	}*/
-	if (message.content === 'mitas')
-	message.reply('Kanni pialle');
+	if (message.content === 'mitas' && message.guild.channels.find("name", "roolit").name === 'roolit'){
+		message.reply('Kanni pialle');
+	}
 });
 
 // THIS  MUST  BE  THIS  WAY
