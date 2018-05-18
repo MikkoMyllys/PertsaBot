@@ -1,9 +1,22 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+// set what commands are fine
 client.on('message', message => {
-    if (message.content === '!MattiLeipoo') {
-    	message.reply('...Merviä!');
+	
+	var messageID = message.channel_id;
+    if (message.content !== '!battlemaster' && 
+		message.content !== '!battlemaster' && 
+		message.content !== '!battlemaster' &&
+		message.content !== '!battlemaster' &&
+		message.content !== '!battlemaster' && 
+		message.content !== '!battlemaster' && 
+		message.content !== '!battlemaster' && 
+		message.content !== '!battlemaster' && 
+		message.content !== '!battlemaster' && 
+		message.content !== '!battlemaster' && 
+		message.content !== '!battlemaster') {
+    	message.reply(messageID);
   	}
 });
 
